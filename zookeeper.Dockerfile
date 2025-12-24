@@ -1,0 +1,11 @@
+FROM confluentinc/cp-zookeeper:7.5.0
+
+ENV ZOOKEEPER_CLIENT_PORT=2181
+ENV ZOOKEEPER_TICK_TIME=2000
+ENV ZOOKEEPER_LOG4J_ROOT_LOGLEVEL=WARN
+ENV ZOOKEEPER_DATA_DIR=/var/lib/zookeeper/data
+ENV ZOOKEEPER_LOG_DIR=/var/lib/zookeeper/log
+
+EXPOSE 2181
+
+CMD ["/etc/confluent/docker/run"]
